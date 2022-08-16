@@ -1,0 +1,25 @@
+<div class="container-fiuld room-posts">
+  <h4 class="pb-4">登録済みルーム一覧</h4>
+  <table>
+    <thead>
+      <tr align="center">
+        <th>部屋画像</th>
+        <th>部屋名</th>
+        <th>部屋の詳細</th>
+        <th>料金</th>
+        <th class= "reservation-date">作成日</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% @rooms.each do |room| %>
+            <tr>
+                <td><%= image_tag room.room_image.url, class:"reservations-image" %></td>
+                <td class="posts-name"><%= link_to room.room_name,  room, class: "link" %></td>
+                <td class="posts-content"><%= room.room_introduction %></td>
+                <td class="price-icon"><%= room.room_price %></td>
+                <td class= "reservation-date"><%= room.created_at %></td>
+            </tr>
+        <% end %>
+    </tbody>
+  </table>
+</div>

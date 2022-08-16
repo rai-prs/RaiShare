@@ -1,0 +1,21 @@
+<div class= "top">
+  <div class= "container top-form">
+    <div class="form-field">
+      <h2>パスワード再設定</h2>
+      <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "users/shared/error_messages", resource: resource %>
+
+        <div class="field">
+          <%= f.label :必須, {class: "badge bg-danger me-3 my-2"} %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "送信" %>
+        </div>
+      <% end %>
+
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>

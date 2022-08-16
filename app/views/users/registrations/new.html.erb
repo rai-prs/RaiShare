@@ -1,0 +1,39 @@
+<div class= "top">
+  <div class= "container top-form">
+    
+    <div class="form-field">
+      <h2>新しいアカウントを作成</h2>
+      <div class="device-inner">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "users/shared/error_messages", resource: resource %>
+
+          <div class="field">
+            <%= f.label :必須, {class: "badge bg-danger me-3 my-2"} %>
+            <%= f.text_field :name, placeholder: "名前" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :必須, {class: "badge bg-danger me-3 my-2"} %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :必須, {class: "badge bg-danger me-3 my-2"} %>
+            <%= f.password_field :password, autocomplete: "new-password", placeholder: "パスワード" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :必須, {class: "badge bg-danger me-3 my-2"} %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "パスワード確認用" %>
+          </div>
+
+          <div class="actions">
+            <%= f.submit "新しいアカウントを作成", class: "btn-primary btn form-control" %>
+          </div>
+          <%= render "users/shared/links" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

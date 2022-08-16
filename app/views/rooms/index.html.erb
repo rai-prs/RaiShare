@@ -1,0 +1,19 @@
+<div class= "container_field room">
+    <h4 class="pb-4">お部屋一覧</h4>
+    <div class= "row">
+        <% @rooms.each do |room| %>    
+            <div class="col-sm-6 col-lg-4 col-xl-3 room-frame-inner mb-5">
+                <%= link_to room, class:"link link-border" do %>
+                    <div class="room-image-out">
+                        <%= image_tag room.room_image.url, class:"room-show-image" %>
+                    </div>
+                    <div class="room-profile">
+                        <p class="room-profile-name"><%= room.room_name %></p>
+                        <p class="room-profile-city"><%= room.room_address %></p>
+                        <p class="room-profile-price price-icon">1泊/<%= room.room_price %>円</p>
+                    </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>
