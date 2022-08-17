@@ -1,0 +1,55 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.top .section-title {
+    font-size: 24px;
+    margin: 35px 0;
+    font-weight: bold;
+}
+
+.panel-item1 {
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 385px;
+}
+
+.panel-item2 {
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 385px;
+}
+
+.panel-item3 {
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 385px;
+}
+
+.panel-item4 {
+    background-image: url(https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 385px;
+}
+
+.panel-item {
+    padding: 15px;
+}
+
+.panel-btn {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.form-panel {
+    height: 385px;
+}

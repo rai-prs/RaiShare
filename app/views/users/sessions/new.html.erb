@@ -1,0 +1,34 @@
+<div class= "top">
+  <div class= "container top-form">
+    
+    <div class="form-field">
+      <h2>ログイン</h2>
+      <div class="device-inner">
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <div class="field">
+            <%= f.label :必須, {class: "badge bg-danger me-3 my-2"} %><br />
+            <%= f.email_field :email, style: "width:100%", autofocus: true, autocomplete: "email", placeholder: "メールアドレス" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :必須, {class: "badge bg-danger me-3 my-2"} %><br />
+            <%= f.password_field :password, style: "width:100%", autocomplete: "current-password", placeholder: "パスワード" %>
+          </div>
+
+          <% if devise_mapping.rememberable? %>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            </div>
+          <% end %>
+
+          <div class="actions">
+            <%= f.submit "ログイン", class: "btn-primary btn form-control" %>
+          </div>
+        <% end %>
+
+        <%= render "users/shared/links" %>
+      </div>
+    </div>
+  </div>
+</div>

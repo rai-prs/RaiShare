@@ -1,0 +1,14 @@
+// Place all the styles related to the Reservations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.notifications {
+    max-width: 100vw;
+    padding: 30px 60px;
+}
+
+.reservations table thead tr {
+    border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+
